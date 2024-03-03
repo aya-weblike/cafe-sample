@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* モバイルファースト */
+
+/* メインの中身 */
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#key-visual {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#key-visual img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+#acs-box1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+  line-height: 2;
+}
+
+main h2 {
+  font-size: 1.8rem;
+}
+
+#submain {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#acs-box2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+#acs-box2 h2 {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+#map {
+  padding: 3rem;
+}
+
+#map iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/* PC表示   */
+@media screen and (min-width: 1024px) {
+  /* メインの中身 */
+
+  main #acs-box1 {
+    padding-top: 6rem;
+    margin-left: 12rem;
+    padding-bottom: 6rem;
+  }
+
+  main #key-visual {
+    width: 650px;
+    height: 430px;
+  }
+
+  main #submain {
+    padding-top: 4.5rem;
+    display: grid;
+    justify-content: center;
+  }
+
+  main h2 {
+    font-size: 1.5em;
+  }
+
+  main p {
+    font-size: 1.35em;
+  }
+
+  main #acs-box2 h2 {
+    margin-bottom: 3rem;
+  }
+
+  #map {
+    width: 500px;
+    height: 500px;
+    margin-top: 5.4rem;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

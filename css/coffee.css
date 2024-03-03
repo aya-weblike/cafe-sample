@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.coffee-wrap {
+  background-color: #fff4f4;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.coffee-inner {
+  padding-top: 40px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+}
+
+figure img {
+  width: 400px;
+  height: 150px;
+  vertical-align: top;
+}
+
+h3 {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+}
+
+.feature {
+  border: 1px solid;
+  height: 100px;
+
+  background-color: #fff;
+}
+
+.coffee-inner p {
+  font-size: 1.4rem;
+}
+
+/* Googleマテリアルアイコン */
+.coffee-wrap p {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  figure img {
+    width: auto;
+  }
+
+  .material-icons {
+    display: none;
+  }
+}

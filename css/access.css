@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* モバイルファースト */
+
+/* メインの中身 */
+
+.key-visual {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.key-visual img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.submain {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.submain__detail {
+  display: flex;
+  flex-flow: column;
+}
+
+.submain__detail h2 {
+  font-size: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+.map {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.map iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/* PC表示   */
+@media screen and (min-width: 1024px) {
+  /* メインの中身 */
+
+  main .key-visual {
+    width: 650px;
+    height: 430px;
+  }
+
+  main .submain {
+    padding-top: 4.5rem;
+    display: grid;
+    justify-content: center;
+  }
+
+  main .submain__detail h2 {
+    margin-bottom: 3rem;
+  }
+
+  .map {
+    margin-top: 9rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .map iframe {
+    width: 500px;
+    height: auto;
+  }
+}

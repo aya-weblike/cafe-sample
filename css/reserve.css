@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+
+/* 大きな見出し */
+main .title-area {
+    padding: 0.05rem;
+    margin-bottom: 1.5rem;
+}
+
+
+main .title-inner {
+    background-color: peru;
+    color: white;
+}
+
+main .title-inner h3 {
+    text-indent: 0.3em;
+    padding: 1rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+
+/* 希望日時選択 */
+main .date-box {
+    display: block;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+
+/* お客様情報の入力 */
+main .form-box {
+    padding-bottom: 0;
+    margin: 0 5px 10px 5px;
+}
+
+main .form-box-table {
+    display: block;
+    width: 100%;
+}
+
+main .form-box-table .item-title {
+    background-color: peru;
+    color: white;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: none;
+    border-right: none;
+
+    display: block;
+    width: auto;
+
+}
+
+main .form-box-table .item-input {
+    border-top: 1px solid #f3f3f3;
+    border-bottom: none;
+    border-right: none;
+    display: block;
+    width: 100%;
+}
+
+main .form-box-table .item-input input {
+    width: 100%;
+    height: 3rem;
+}
+
+/* 必須マーク */
+.form-require {
+    display: inline-block;
+    position: relative;
+    padding-right: 4.8rem;
+    text-indent: 0.3em;
+}
+
+.form-require::before {
+    background-color: #fff;
+    color: #d50d0d;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    top: 7.5px;
+
+
+    position: absolute;
+    content: '必 須';
+    right: 0;
+
+    line-height: 1;
+    display: inline-block;
+    font-size: 1.3rem;
+
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* 個人情報保護のお取り扱い部分 */
+
+.outline-area {
+    margin: 30px 0;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+#agree{
+    background-color: antiquewhite;
+}
+
+#p-info-area::before {
+    top: 5px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    main{
+        width: 960px;
+    }
+
+    main .title-area {
+        margin-bottom: 35px;
+        margin-top: 50px;
+    }
+
+
+    main .title-inner h3 {
+        font-size: 22px;
+    }
+
+    .form-require {
+        font-size: 18px;
+    }
+
+    main .form-box-table .item-input input {
+        height: 3.5rem;
+        font-size: 15px;
+    }
+
+    .outline-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    #p-info-area::before {
+        top: 7.5px;
+    }
+
+    .reserve{
+        display: flex;
+        justify-content: center;
+    }
+    
+
+}
+
