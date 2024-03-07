@@ -4,18 +4,55 @@ MENU PAGE
 const menu = document.querySelector('#menu');
 
 const menuLists = [
-	'coffee.jpg',
-	'cafelatte.jpg',
-	'matcha-latte.jpg',
-	'orange-juice.jpg',
-	'tiramisu.jpg',
-	'cupcakes.jpg',
-	'hamburger.jpg',
-	'hotdog.jpg',
+	{
+		name:'コーヒー',
+		img:'coffee.jpg',
+		price:500,
+	},
+	{
+		name:'カフェラッテ',
+		img:'cafelatte.jpg',
+		price:500,
+	},
+	{
+		name:'抹茶ラテ',
+		img:'matcha-latte.jpg',
+		price:500,
+	},
+	{
+		name:'オレンジジュース',
+		img:'orange-juice.jpg',
+		price:500,
+	},
+	{
+		name:'ティラミス',
+		img:'tiramisu.jpg',
+		price:500,
+	},
+	{
+		name:'カップケーキ',
+		img:'cupcakes.jpg',
+		price:500,
+	},
+	{
+		name:'ハンバーガー',
+		img:'hamburger.jpg',
+		price:500,
+	},
+	{
+		name:'ホットドッグ',
+		img:'hotdog.jpg',
+		price:500,
+	},
 ];
 
 for(let i=0; i < menuLists.length; i++){
-	const content = `<div><img src="img/${menuLists[i]}" alt=""></div>`;
+	const {name,img,price} = menuLists[i];
+	const content = `<div>
+						<img src="img/${img}" alt="">
+						<h2>${name}</h2>
+						<p>${price}円</p>
+					</div>`;
 	menu.insertAdjacentHTML('beforeend',content);
 }
 

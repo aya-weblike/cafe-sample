@@ -79,7 +79,10 @@ FOOTER
 /*-------------------------------------------
 MENU PAGE
 -------------------------------------------*/
-#menu-page{
+body{
+	width: 94%;
+	max-width: 1200px;
+	margin: 0 auto;
 	text-align: center;
 	font-family: "Kiwi Maru", serif;	  
 }
@@ -89,22 +92,22 @@ MENU PAGE
 	gap: 30px;
 	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 	max-width: 1020px;
-	margin: auto;
+	margin:auto;
 	padding: 30px;
 }
 
-#menu-page img{
+img{
 	width: 100%;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
 }
 
-#menu-page h1{
+h1{
 	margin: 30px 0;
 	font-size: 40px;
 }
 
-#menu-page h2{
+h2{
 	margin-top: 6px;
 }
 
