@@ -1,4 +1,16 @@
 /*-------------------------------------------
+ハンバーガーメニュー
+-------------------------------------------*/
+const btn = document.querySelector('.btn-menu');
+const nav = document.querySelector('.header-nav');
+
+btn.addEventListener('click' , () => {
+	nav.classList.toggle('open-menu');
+	btn.classList.toggle('close-menu');
+});
+
+
+/*-------------------------------------------
 MENU PAGE
 -------------------------------------------*/
 const menu = document.querySelector('#menu');

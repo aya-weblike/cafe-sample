@@ -1,57 +1,124 @@
 @charset "utf-8";
+/* 
+.zen-kaku gothic new-regular {
+	font-family: "Zen Kaku Gothic New", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 700
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
 
 /*-------------------------------------------
-COLORS
+変数管理
 -------------------------------------------*/
 :root{
-
+	--logo-font:"Oswald", sans-serif;
+	--body-font:"Zen Kaku Gothic New", sans-serif;
+	--font-color:#3c3c3c;
+	--emphasize-color:#da6d24;
+	--bg:#f5deb3;
+	--btn-bg:#8b4513;
+	--btn-hover:#ccc;
+	
 }
-
 
 /*-------------------------------------------
 共通部分
 -------------------------------------------*/
-html{
-    font-size: 100%;    
+html {
+    font-size: 100%;
 }
 
-body{
+body {
+	background: var(--bg);
+	font-family: var(--body-font);
+	font-weight: 400;
+}
+
+main{
+	background: #fff;
 }
 
 img{
+	max-width: 100%;
     vertical-align: bottom;
 }
 
 a{
+	display: block;
     text-decoration: none;
 }
 
-/* Layout */
-.wrap{
-
+p{
+	line-height: 1.7;
 }
 
-.main{
 
+/* Layout */
+.wrap{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.inner-wrap{
+	max-width: 1000px;
+	width: 94%;
+	margin: 2rem auto;
+	padding: 3rem 1rem;
+}
+
+section{
+	margin: 6rem 0;
 }
 
 .text-center{
     text-align: center;
 }
 
+.flex{
+	display: flex;
+}
 
 /* Button */
 .btn{
-    display: inline-block;
-    padding: 1.25rem 3.25rem;
-    font-size: 1.375rem;
-    text-align: center;
-    width: 100%;
+    background: var(--btn-bg);
+	margin-bottom: 2rem;
+	padding: 1rem;
+	font-size: 1rem;
+	color: #fff;
+	border-radius: 8px;
+	border: 0;
+	cursor: pointer;
 }
 
+.btn:hover{
+	background: var(--btn-hover);
+	color: black;
+}
 
 /* Heading */
 .section-title{
+	padding: 0.5rem 0;
+    margin-bottom: 0.2rem;
+    border-bottom: 3px dotted #d3a415;
+	font-size: 1.5rem;
+	font-weight: bold;	
+}
+
+.section-heading{
+	margin-bottom: .5rem;
+	font-size: 1.2rem;
+	color: var(--emphasize-color);
 }
 
 
@@ -59,74 +126,189 @@ a{
 /*-------------------------------------------
 HEADER
 -------------------------------------------*/
+header .wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
 
+
+.logo{
+	font-size: 2rem;
+	font-family: var(--logo-font);
+	font-weight: 700;
+}
+
+/*-------------------------------------------
+ハンバーガーメニュー
+-------------------------------------------*/
+.header-nav{
+	background: var(--bg);
+	width: 0;
+	position: absolute;
+	z-index: 2;
+	top: 50px;
+	right: 0;
+	overflow: hidden;
+	transition: .5s;
+}
+
+
+.header-nav li{
+	margin: 3rem 0;
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+
+.btn-menu::before{
+	font-family: "Font Awesome 6 Free";
+	content:'\f0c9';
+	font-size: 2rem;
+	font-weight: 900;
+	padding-right: 3px;
+}
+
+.header-nav.open-menu{
+	width: 100%;
+}
+
+.btn-menu.close-menu::before{
+	font-family: "Font Awesome 6 Free";
+	content:'\f00d';
+	font-size: 2rem;
+	font-weight: 900;
+	padding-right: 3px;
+
+}
 
 
 
 /*-------------------------------------------
 MAIN
 -------------------------------------------*/
+/* fv */
+.fv img{
+	width: 100%;
+	max-width: 1920px;
+	object-fit: cover;
+}
 
+/* EVENT */
+.event h3{
+	margin: 1rem 0;
+	color: red;
+}
 
+/* CONTENTS */
+.contents-box{
+	align-items: center;
+	gap: 1.2rem;
+}
+
+.contents-box:not(:last-child),
+.about-menu-box:not(:last-child){
+	margin-bottom: 3rem;
+}
 
 
 
 /*-------------------------------------------
 FOOTER
 -------------------------------------------*/
-
-
-/*-------------------------------------------
-MENU PAGE
--------------------------------------------*/
-body{
-	width: 94%;
-	max-width: 1200px;
-	margin: 0 auto;
-	text-align: center;
-	font-family: "Kiwi Maru", serif;	  
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-#menu{
-	display: grid;
-	gap: 30px;
-	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-	max-width: 1020px;
-	margin:auto;
-	padding: 30px;
+.footer-nav{
+	margin: 2rem 0;
+	justify-content: center;
+	gap: 1.5rem;
 }
-
-img{
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	object-fit: cover;
-}
-
-h1{
-	margin: 30px 0;
-	font-size: 40px;
-}
-
-h2{
-	margin-top: 6px;
-}
-
 
 /*-------------------------------------------
 レスポンシブ
 -------------------------------------------*/
-
 @media (min-width: 600px) {
     /* 600px以上に適用されるCSS（デスクトップ用） */
 
 /* 共通 */
+	/* Button */
+	.btn{
+		width: 50%;
+	}
 
+	.btn-area{
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
 
 /* HEADER */
+.header-nav{
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+}
+
+.header-nav li:hover{
+	background: #ccc;
+}
+
+.header-nav a{
+	padding: 1rem;
+}
+
+
+/* ハンバーガーメニューにしない	 */
+.btn-menu{
+	display: none;
+}
+
+.header-nav{
+	position: static;
+}
+
+.header-nav li{
+	margin: 0;
+}
 
 /* MAIN */
+	/* CONTENTS */
+	.contents-wrap{
+		display: flex;
+		align-items: center;
+	}
+
+	/* ABOUT MENU */
+	.about-menu-inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.about-menu-box:not(:last-child){
+		margin-bottom: 0;
+	}
+
+	.about-menu-box img{
+		height: 300px;
+	}
+
 
 /* FOOTER */
+.footer-nav {
+	display: flex;
+	justify-content: center;
+}
+.footer-nav li {
+	margin: 0 .75rem;
+}
+.footer-nav a:hover {
+	color: #fff;
+}
 
 
 }
