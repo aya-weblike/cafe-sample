@@ -68,6 +68,10 @@ p{
 	line-height: 1.7;
 }
 
+.fadein{
+	opacity: 0;
+}
+
 
 /* Layout */
 .wrap{
@@ -164,6 +168,7 @@ header .wrap{
 	margin: 3rem 0;
 	text-align: center;
 	font-size: 1.25rem;
+	opacity: 0;
 }
 
 
@@ -230,6 +235,7 @@ MENU PAGE
 	margin-top: 5rem;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
+	filter: blur(20px);
 }
 
 
@@ -292,6 +298,7 @@ footer {
 
 	.header-nav li{
 		margin: 0;
+		opacity: 1;
 	}
 
 /* HOME PAGE */
