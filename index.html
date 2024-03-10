@@ -42,7 +42,12 @@
 		<main>
 			<!-- メインビジュアル -->
 			<div class="fv">
-				<img src="img/home-fv-sp.jpg" alt="Ayacafeトップイメージ画像1">
+				<picture>
+					<!-- ブラウザ幅最大～700pxまでPC用の高解像度画像が表示 -->
+					<source srcset="img/home-fv-pc.jpg" media="(min-width: 700px)" type="image/jpg">
+					<!-- ブラウザ幅700px～から最小幅までSP用の画像が表示 -->
+					<img src="img/home-fv-sp.jpg" alt=”カフェのトップイメージ画像です”>
+				</picture>
 			</div>
 			
 			<div class="inner-wrap">

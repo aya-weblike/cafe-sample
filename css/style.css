@@ -20,14 +20,21 @@
 変数管理
 -------------------------------------------*/
 :root{
+	/* FONT */
 	--logo-font:"Oswald", sans-serif;
 	--body-font:"Zen Kaku Gothic New", sans-serif;
+
+	/* COLOR */
 	--font-color:#3c3c3c;
 	--emphasize-color:#da6d24;
-	--bg:#f5deb3;
+	--bg-body:#f5deb3;
+	--bg-main:#fff;
 	--btn-bg:#8b4513;
 	--btn-hover:#ccc;
-	
+	--btn-text:#fff;
+	--btn-text-hover:#000;
+	--title-underline:#d3a415;
+	--li-hover:#ccc;
 }
 
 /*-------------------------------------------
@@ -38,13 +45,13 @@ html {
 }
 
 body {
-	background: var(--bg);
+	background: var(--bg-body);
 	font-family: var(--body-font);
 	font-weight: 400;
 }
 
 main{
-	background: #fff;
+	background: var(--bg-main);
 }
 
 img{
@@ -73,8 +80,8 @@ p{
 .inner-wrap{
 	max-width: 1000px;
 	width: 94%;
-	margin: 2rem auto;
-	padding: 3rem 1rem;
+	margin: 0 auto;
+	padding: 3rem 0;
 }
 
 section{
@@ -95,7 +102,7 @@ section{
 	margin-bottom: 2rem;
 	padding: 1rem;
 	font-size: 1rem;
-	color: #fff;
+	color: var(--btn-text);
 	border-radius: 8px;
 	border: 0;
 	cursor: pointer;
@@ -103,14 +110,14 @@ section{
 
 .btn:hover{
 	background: var(--btn-hover);
-	color: black;
+	color: var(--btn-text-hover);
 }
 
 /* Heading */
 .section-title{
 	padding: 0.5rem 0;
     margin-bottom: 0.2rem;
-    border-bottom: 3px dotted #d3a415;
+    border-bottom: 3px dotted var(--title-underline);
 	font-size: 1.5rem;
 	font-weight: bold;	
 }
@@ -120,8 +127,6 @@ section{
 	font-size: 1.2rem;
 	color: var(--emphasize-color);
 }
-
-
 
 /*-------------------------------------------
 HEADER
@@ -144,7 +149,7 @@ header .wrap{
 ハンバーガーメニュー
 -------------------------------------------*/
 .header-nav{
-	background: var(--bg);
+	background: var(--bg-body);
 	width: 0;
 	position: absolute;
 	z-index: 2;
@@ -180,13 +185,11 @@ header .wrap{
 	font-size: 2rem;
 	font-weight: 900;
 	padding-right: 3px;
-
 }
 
 
-
 /*-------------------------------------------
-MAIN
+HOME PAGE
 -------------------------------------------*/
 /* fv */
 .fv img{
@@ -198,7 +201,7 @@ MAIN
 /* EVENT */
 .event h3{
 	margin: 1rem 0;
-	color: red;
+	color: var(--emphasize-color);
 }
 
 /* CONTENTS */
@@ -212,6 +215,22 @@ MAIN
 	margin-bottom: 3rem;
 }
 
+/*-------------------------------------------
+MENU PAGE
+-------------------------------------------*/
+#menu-page .section-title{
+	margin-bottom: 1.8rem;
+}
+
+#menu-page h2{
+	margin-top: .375rem;
+}
+
+#menu-page img{
+	margin-top: 5rem;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
 
 
 /*-------------------------------------------
@@ -231,8 +250,8 @@ footer {
 /*-------------------------------------------
 レスポンシブ
 -------------------------------------------*/
-@media (min-width: 600px) {
-    /* 600px以上に適用されるCSS（デスクトップ用） */
+@media (min-width: 700px) {
+    /* 700px以上に適用されるCSS（デスクトップ用） */
 
 /* 共通 */
 	/* Button */
@@ -247,35 +266,35 @@ footer {
 	}
 
 /* HEADER */
-.header-nav{
-	width: 100%;
-	display: flex;
-	gap: 1rem;
-}
+	.header-nav{
+		width: 100%;
+		display: flex;
+		gap: 1rem;
+	}
 
-.header-nav li:hover{
-	background: #ccc;
-}
+	.header-nav li:hover{
+		background: var(--li-hover);
+	}
 
-.header-nav a{
-	padding: 1rem;
-}
+	.header-nav a{
+		padding: 1rem;
+	}
 
 
 /* ハンバーガーメニューにしない	 */
-.btn-menu{
-	display: none;
-}
+	.btn-menu{
+		display: none;
+	}
 
-.header-nav{
-	position: static;
-}
+	.header-nav{
+		position: static;
+	}
 
-.header-nav li{
-	margin: 0;
-}
+	.header-nav li{
+		margin: 0;
+	}
 
-/* MAIN */
+/* HOME PAGE */
 	/* CONTENTS */
 	.contents-wrap{
 		display: flex;
@@ -297,20 +316,24 @@ footer {
 		height: 300px;
 	}
 
+/* MENU PAGE */
+	#menu{
+		display: grid;
+		gap: 30px;
+		grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+	}
 
 /* FOOTER */
-.footer-nav {
-	display: flex;
-	justify-content: center;
-}
-.footer-nav li {
-	margin: 0 .75rem;
-}
-.footer-nav a:hover {
-	color: #fff;
-}
-
-
+	.footer-nav {
+		display: flex;
+		justify-content: center;
+	}
+	.footer-nav li {
+		margin: 0 .75rem;
+	}
+	.footer-nav li:hover {
+		color: var(--li-hover);
+	}
 }
 
 

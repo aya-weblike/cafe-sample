@@ -3,22 +3,61 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ayacafe</title>
+		<title>メニュー</title>
 		<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 		<meta name="description" content="ゆっくりとした時間を過ごしたい方へ〜梅田にあるコーヒー豆の種類にこだわったカフェです。">
-
+		
 		<!-- css -->
 		<link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 
 		<!-- js -->
+		<script src="https://kit.fontawesome.com/44a6871718.js" crossorigin="anonymous"></script>
 		<script src="js/script.js" defer></script>
 	</head>
-	<body id="menu-page">
-		<h1>DRINK & FOOD  MENU</h1>
-		<div id="menu"></div>
+
+	<body>
+		<!-- ヘッダー -->
+		<header>
+			<div class="wrap">
+				<h1 class="logo">
+					<a href="index.html">Ayacafe</a>
+				</h1>
+				<nav>
+					<button class="btn-menu"></button>
+					<ul class="header-nav">
+						<li><a href="menu.html">メニュー</a></li>
+						<li><a href="#">アクセス</a></li>
+						<li><a href="#">イベント情報</a></li>
+						<li><a href="#">グッズ</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- メイン -->	
+		<main id="menu-page">
+			<section class="inner-wrap">
+				<h1 class="section-title">DRINK & FOOD  MENU</h1>
+				<div id="menu" class="text-center"></div>
+			</section>
+		</main>
+
+		<!-- フッター -->
+		<footer>
+			<a class="logo" href="">Ayacafe</a>
+			<ul class="footer-nav flex">
+				<li>
+					<a href="#"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+				</li>
+			</ul>
+			<p><small>&copy;2024 Aya</small></p>
+		</footer>
 	</body>
 </html>
