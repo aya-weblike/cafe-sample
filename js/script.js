@@ -78,74 +78,78 @@ fadeElements.forEach((fadeElement) => {
 /*-------------------------------------------
 MENU PAGE
 -------------------------------------------*/
+if(document.URL.match(/menu/)){
+	// ドメイン以下のパス名が /menu.html の場合に実行する処理
 
-// メニューを表示させる
-const menu = document.querySelector('#menu');
+	// メニューを表示させる
+	const menu = document.querySelector('#menu');
 
-const menuLists = [
-	{
-		name:'コーヒー',
-		img:'coffee.jpg',
-		price:500,
-	},
-	{
-		name:'カフェラッテ',
-		img:'cafelatte.jpg',
-		price:500,
-	},
-	{
-		name:'抹茶ラテ',
-		img:'matcha-latte.jpg',
-		price:500,
-	},
-	{
-		name:'オレンジジュース',
-		img:'orange-juice.jpg',
-		price:500,
-	},
-	{
-		name:'ティラミス',
-		img:'tiramisu.jpg',
-		price:500,
-	},
-	{
-		name:'カップケーキ',
-		img:'cupcakes.jpg',
-		price:500,
-	},
-	{
-		name:'ハンバーガー',
-		img:'hamburger.jpg',
-		price:500,
-	},
-	{
-		name:'ホットドッグ',
-		img:'hotdog.jpg',
-		price:500,
-	},
-];
+	const menuLists = [
+		{
+			name:'コーヒー',
+			img:'coffee.jpg',
+			price:500,
+		},
+		{
+			name:'カフェラッテ',
+			img:'cafelatte.jpg',
+			price:500,
+		},
+		{
+			name:'抹茶ラテ',
+			img:'matcha-latte.jpg',
+			price:500,
+		},
+		{
+			name:'オレンジジュース',
+			img:'orange-juice.jpg',
+			price:500,
+		},
+		{
+			name:'ティラミス',
+			img:'tiramisu.jpg',
+			price:500,
+		},
+		{
+			name:'カップケーキ',
+			img:'cupcakes.jpg',
+			price:500,
+		},
+		{
+			name:'ハンバーガー',
+			img:'hamburger.jpg',
+			price:500,
+		},
+		{
+			name:'ホットドッグ',
+			img:'hotdog.jpg',
+			price:500,
+		},
+	];
 
-for(let i=0; i < menuLists.length; i++){
-	const {name,img,price} = menuLists[i];
-	const content = `<div>
-						<img class="menu-item" src="img/${img}" alt="">
-						<h2>${name}</h2>
-						<p>${price}円</p>
-					</div>`;
-	menu.insertAdjacentHTML('beforeend',content);
-}
+	for(let i=0; i < menuLists.length; i++){
+		const {name,img,price} = menuLists[i];
+		const content = `<div>
+							<img class="menu-item" src="img/${img}" alt="">
+							<h2>${name}</h2>
+							<p>${price}円</p>
+						</div>`;
+		menu.insertAdjacentHTML('beforeend',content);
+	}
 
-// 画像をぼかし→くっきりにする
-const menuItems = document.querySelectorAll('.menu-item');
+	// 画像をぼかし→くっきりにする
+	const menuItems = document.querySelectorAll('.menu-item');
 
-for(let i=0; i < menuItems.length; i++){
-	const keyframes = {
-		filter:['blue(20px)','blur(0)'],
-	};
-	const options = {
-		duration:600,
-		delay:i*300,
-		fill:'forwards',
-	};
-	menuItems[i].animate(keyframes,options);
-}
+	for(let i=0; i < menuItems.length; i++){
+		const keyframes = {
+			filter:['blur(20px)','blur(0)'],
+		};
+		const options = {
+			duration:600,
+			delay:i*300,
+			fill:'forwards',
+		};
+		menuItems[i].animate(keyframes,options);
+	}
+};
+
