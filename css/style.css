@@ -89,7 +89,7 @@ p{
 }
 
 section{
-	margin: 6rem 0;
+	margin: 3.5rem 0;
 }
 
 .text-center{
@@ -120,7 +120,7 @@ section{
 /* Heading */
 .section-title{
 	padding: 0.5rem 0;
-    margin-bottom: 0.2rem;
+	margin-bottom: 1.8rem;
     border-bottom: 3px dotted var(--title-underline);
 	font-size: 1.5rem;
 	font-weight: bold;	
@@ -128,7 +128,8 @@ section{
 
 .section-heading{
 	margin-bottom: .5rem;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
+	font-weight: bold;
 	color: var(--emphasize-color);
 }
 
@@ -223,10 +224,6 @@ HOME PAGE
 /*-------------------------------------------
 MENU PAGE
 -------------------------------------------*/
-#menu-page .section-title{
-	margin-bottom: 1.8rem;
-}
-
 #menu-page h2{
 	margin-top: .375rem;
 }
@@ -237,6 +234,37 @@ MENU PAGE
 	object-fit: cover;
 	filter: blur(20px);
 }
+
+/*-------------------------------------------
+ACCESS PAGE
+-------------------------------------------*/
+.page-desc p{
+	font-size: 1.3rem;
+}
+
+#access-page tr{
+    font-size: 1.3rem;
+    margin-bottom: .5em;
+    line-height: 1.7;
+}
+
+#access-page th{
+    font-weight: normal;
+}
+
+#access-page td{
+    padding-left: 1rem;
+}
+
+iframe {
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
+/*-------------------------------------------
+EVENT PAGE
+-------------------------------------------*/
+
 
 
 /*-------------------------------------------
@@ -269,6 +297,11 @@ footer {
 		display: flex;
 		flex-flow: column;
 		align-items: center;
+	}
+
+	/* Layout */
+	section{
+		margin: 6rem 0;
 	}
 
 /* HEADER */
@@ -329,6 +362,24 @@ footer {
 		gap: 30px;
 		grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
 	}
+
+/* ACCESS PAGE */
+	#access-page table{
+		margin: 0 auto;
+	}
+
+	iframe{
+		width: 50%;
+		aspect-ratio: 3/2;
+	}
+
+
+	/* EVENT PAGE */
+	.event-desc .section-heading,
+	.event-desc p{
+		font-size: 1.5rem;
+	}
+
 
 /* FOOTER */
 	.footer-nav {

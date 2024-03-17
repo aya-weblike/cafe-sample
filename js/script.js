@@ -153,3 +153,15 @@ if(document.URL.match(/menu/)){
 	}
 };
 
+/*-------------------------------------------
+ACCESS PAGE
+-------------------------------------------*/
+if(document.URL.match(/access/)){
+	$(function(){
+		$('.slideshow').slick({
+			autoplay: true,
+			autoplaySpeed: 3000,
+			dots: true
+		});
+	});
+};

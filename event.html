@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>イベント情報</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="description" content="ゆっくりとした時間を過ごしたい方へ〜梅田にあるコーヒー豆の種類にこだわったカフェです。">
+		
+		<!-- css -->
+		<link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- js -->
+		<script src="https://kit.fontawesome.com/44a6871718.js" crossorigin="anonymous"></script>
+		<script src="js/script.js" defer></script>
+	</head>
+
+	<body>
+		<!-- ヘッダー -->
+		<header>
+			<div class="wrap">
+				<h1 class="logo">
+					<a href="index.html">Ayacafe</a>
+				</h1>
+				<nav>
+					<button class="btn-menu"></button>
+					<ul class="header-nav">
+						<li><a href="menu.html">メニュー</a></li>
+						<li><a href="access.html">アクセス</a></li>
+						<li><a href="event.html">イベント情報</a></li>
+						<li><a href="goods.html">グッズ</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- メイン -->
+		<main id="event-page">
+			<div class="inner-wrap">
+				<section class="page-desc">
+					<h2 class="section-title">イベント情報</h2>
+					<p>今月のイベント情報です</p>
+				</section>
+
+				<!-- メインビジュアル -->
+				<div class="fv">
+					<picture>
+						<!-- ブラウザ幅最大～700pxまでPC用の高解像度画像が表示 -->
+						<source srcset="img/event-fv-pc.jpg" media="(min-width: 700px)" type="image/jpg">
+						<!-- ブラウザ幅700px～から最小幅までSP用の画像が表示 -->
+						<img src="img/event-fv-sp.jpg" alt=”カフェのトップイメージ画像です”>
+					</picture>
+				</div>
+
+				<section class="event-desc">
+					<div class="text-center">
+						<h3 class="section-heading">コーヒー豆全品 5% OFF!</h3>
+						<p>4月 XX日(土)・XX日(日)</p>
+					</div>
+				</section>
+
+			
+			
+
+
+
+			</div>
+		</main>
+
+		<!-- フッター -->
+		<footer>
+			<a class="logo" href="">Ayacafe</a>
+			<ul class="footer-nav flex">
+				<li>
+					<a href="#"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+				</li>
+			</ul>
+			<p><small>&copy;2024 Aya</small></p>
+		</footer>
+	</body>
+</html>
