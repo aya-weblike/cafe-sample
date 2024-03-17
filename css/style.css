@@ -1,21 +1,4 @@
 @charset "utf-8";
-/* 
-.zen-kaku gothic new-regular {
-	font-family: "Zen Kaku Gothic New", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  } */
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 700
-
-.oswald-<uniquifier> {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
 /*-------------------------------------------
 変数管理
 -------------------------------------------*/
@@ -143,7 +126,6 @@ header .wrap{
 	padding: 1rem;
 }
 
-
 .logo{
 	font-size: 2rem;
 	font-family: var(--logo-font);
@@ -164,14 +146,12 @@ header .wrap{
 	transition: .5s;
 }
 
-
 .header-nav li{
 	margin: 3rem 0;
 	text-align: center;
 	font-size: 1.25rem;
 	opacity: 0;
 }
-
 
 .btn-menu::before{
 	font-family: "Font Awesome 6 Free";
@@ -192,7 +172,6 @@ header .wrap{
 	font-weight: 900;
 	padding-right: 3px;
 }
-
 
 /*-------------------------------------------
 HOME PAGE
@@ -222,13 +201,13 @@ HOME PAGE
 }
 
 /*-------------------------------------------
-MENU PAGE
+MENU PAGE & GOODS PAGE 
 -------------------------------------------*/
-#menu-page h2{
-	margin-top: .375rem;
+.product-name{
+	margin-top: .5rem;
 }
 
-#menu-page img{
+.product-page img{
 	margin-top: 5rem;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
@@ -260,12 +239,6 @@ iframe {
 	width: 100%;
 	aspect-ratio: 16/9;
 }
-
-/*-------------------------------------------
-EVENT PAGE
--------------------------------------------*/
-
-
 
 /*-------------------------------------------
 FOOTER
@@ -356,14 +329,20 @@ footer {
 		height: 300px;
 	}
 
-/* MENU PAGE */
-	#menu{
+/* MENU PAGE & GOODS PAGE  */
+	#menu,
+	#goods{
 		display: grid;
 		gap: 30px;
 		grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
 	}
 
 /* ACCESS PAGE */
+	#access-page .fv{
+		width: 70%;
+		margin: 0 auto;
+	}
+
 	#access-page table{
 		margin: 0 auto;
 	}
@@ -373,13 +352,16 @@ footer {
 		aspect-ratio: 3/2;
 	}
 
+/* EVENT PAGE */
+	#event-page .fv{
+		width: 70%;
+		margin: 0 auto;
+	}
 
-	/* EVENT PAGE */
 	.event-desc .section-heading,
 	.event-desc p{
 		font-size: 1.5rem;
 	}
-
 
 /* FOOTER */
 	.footer-nav {
