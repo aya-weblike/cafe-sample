@@ -149,6 +149,8 @@ if(document.URL.match(/menu/)){
 		};
 		menuItems[i].animate(keyframes,options);
 	}
+
+
 };
 
 /*-------------------------------------------
